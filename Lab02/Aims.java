@@ -3,7 +3,7 @@ public class Aims {
      * Main method
      * @param args
      * Create a new Cart, create new DVDs and populate the cart with those DVDs.
-     * Print the total cost of the items in the cart
+     * Print the total cost of all items in the cart
      * Remove a DVD from the cart
      */
     public static void main(String args[]) {
@@ -21,12 +21,13 @@ public class Aims {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
         anOrder.addDigitalVideoDisc(dvd3);
 
-        //Print total costs of the items in the cart
+        //Print total costs of all items in the cart
         System.out.println("Total Cost is: ");
         System.out.println(anOrder.totalCost());
 
         //Remove a DVD from the cart
-        anOrder.removeDigitalVideoDisc(dvd2);
+        anOrder.removeDigitalVideoDisc(dvd3);
+        //Print all DVDs in the cart
         anOrder.printCart();
     }
 
