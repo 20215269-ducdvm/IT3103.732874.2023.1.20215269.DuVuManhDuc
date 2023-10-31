@@ -1,5 +1,5 @@
 public class Cart {
-    public static final int MAX_NUMBER_ORDERED = 20;
+    public static final int MAX_NUMBER_ORDERED = 2;
 
     /**
      * The list of ordered DVDs in the cart
