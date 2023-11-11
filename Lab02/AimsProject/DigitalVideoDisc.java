@@ -1,5 +1,5 @@
 public class DigitalVideoDisc {
-    private final String title;
+    private String title;
     private String category;
     private String director;
     private int length;
@@ -49,7 +49,9 @@ public class DigitalVideoDisc {
         this.length = length;
         this.cost = cost;
     }
-
+    public void setTitle(String title) {
+        this.title = title;
+    }
     /**
      * Method to print out the information of a DigitalVideoDisc
      */
