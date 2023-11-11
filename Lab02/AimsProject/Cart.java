@@ -1,5 +1,5 @@
 public class Cart {
-    public static final int MAX_NUMBER_ORDERED = 2;
+    public static final int MAX_NUMBER_ORDERED = 20;
 
     /**
      * The list of ordered DVDs in the cart
@@ -19,6 +19,59 @@ public class Cart {
             itemsOrdered[qtyOrdered] = disc;
             qtyOrdered++;
             System.out.println("The disc has been added");
+        }
+        else {
+            System.out.println("The cart is almost full");
+        }
+    }
+
+    /**
+     * Add a list of discs to the cart if the cart is not full
+     * @param dvdList list of discs to be added
+     */
+    /*
+    public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
+        if(qtyOrdered + dvdList.length <= MAX_NUMBER_ORDERED) {
+            for(int i = 0; i < dvdList.length; i++) {
+                itemsOrdered[qtyOrdered] = dvdList[i];
+                qtyOrdered++;
+            }
+            System.out.println("The discs have been added");
+        }
+        else {
+            System.out.println("The cart is almost full");
+        }
+    }
+*/
+    /**
+     * Add a list of discs (arbitrary number) to the cart if the cart is not full
+     * @param dvds discs to be added
+     */
+
+    public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+        if(qtyOrdered + dvds.length <= MAX_NUMBER_ORDERED) {
+            for(int i = 0; i < dvds.length; i++) {
+                itemsOrdered[qtyOrdered] = dvds[i];
+                qtyOrdered++;
+            }
+            System.out.println("The discs have been added");
+        }
+        else {
+            System.out.println("The cart is almost full");
+        }
+    }
+    /**
+     * Add two discs to the cart if the cart is not full
+     * @param dvd1 the first disc to be added
+     * @param dvd2 the second disc to be added
+     */
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        if(qtyOrdered + 2 <= MAX_NUMBER_ORDERED) {
+            itemsOrdered[qtyOrdered] = dvd1;
+            qtyOrdered++;
+            itemsOrdered[qtyOrdered] = dvd2;
+            qtyOrdered++;
+            System.out.println("The discs have been added");
         }
         else {
             System.out.println("The cart is almost full");
