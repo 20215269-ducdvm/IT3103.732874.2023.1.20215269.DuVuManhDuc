@@ -1,5 +1,5 @@
 public class Cart {
-    public static final int MAX_NUMBER_ORDERED = 2;
+    public static final int MAX_NUMBER_ORDERED = 20;
 
     /**
      * The list of ordered DVDs in the cart
@@ -14,11 +14,17 @@ public class Cart {
      * Add a disc to the cart if the cart is not full
      * @param disc the disc to be added
      */
+    /**
+     * Getters for Cart
+     */
+    public int getQtyOrdered() {
+        return qtyOrdered;
+    }
     public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if(qtyOrdered < MAX_NUMBER_ORDERED) {
             itemsOrdered[qtyOrdered] = disc;
+            System.out.println("The disc " + itemsOrdered[qtyOrdered].getTitle() + " has been added");
             qtyOrdered++;
-            System.out.println("The disc has been added");
         }
         else {
             System.out.println("The cart is almost full");
@@ -30,13 +36,14 @@ public class Cart {
      */
 
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+        String title = disc.getTitle();
         for(int i = 0; i < qtyOrdered; i++) {
             if(itemsOrdered[i].getTitle().equals(disc.getTitle())) {
                 for(int j = i; j < qtyOrdered - 1; j++) {
                     itemsOrdered[j] = itemsOrdered[j + 1];
                 }
                 qtyOrdered--;
-                System.out.println("The disc has been removed");
+                System.out.println("The disc " + title + " has been removed");
                 return;
             }
         }
