@@ -60,9 +60,47 @@ public class Cart {
         }
         return total;
     }
+    /**
+     * Print all ordered items in the cart, along with their prices
+     * Print the total price
+     */
     public void printCart() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered items:");
         for(int i = 0; i < qtyOrdered; i++) {
-           itemsOrdered[i].print();
+            System.out.println(i + 1 + ". DVD - " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getCategory() + " - " + itemsOrdered[i].getDirector() + " - " + itemsOrdered[i].getLength() + ": " + itemsOrdered[i].getCost() + "$");
         }
+        System.out.println("Total cost: " + totalCost());
+        System.out.println("***************************************************");
+    }
+    /**
+     * Method to search for a DigitalVideoDisc with a given ID
+     * @param id the given ID
+     * @return true if the DigitalVideoDisc has the same ID as the given ID, false otherwise
+     */
+    boolean isMatchId(String id) {
+        for(int i = 0; i < qtyOrdered; i++) {
+            if(itemsOrdered[i].getId().equals(id)) {
+                //print out the information of the DigitalVideoDisc
+                itemsOrdered[i].print();
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     * Method to check if a DigitalVideoDisc has the same title as a given string
+     * @param title the given string
+     * @return true if the DigitalVideoDisc has the same title as the given string, false otherwise
+     */
+    boolean isMatchTitle(String title) {
+        for(int i = 0; i < qtyOrdered; i++) {
+            if(itemsOrdered[i].getTitle().equals(title)) {
+                //print out the information of the DigitalVideoDisc
+                itemsOrdered[i].print();
+                return true;
+            }
+        }
+        return false;
     }
 }

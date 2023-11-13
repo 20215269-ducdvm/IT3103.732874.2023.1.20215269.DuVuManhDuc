@@ -27,6 +27,9 @@ public class DigitalVideoDisc {
         return cost;
     }
 
+    public String getId() {
+        return id;
+    }
     /**
      * Constructor methods for DigitalVideoDisc
      */
@@ -73,7 +76,6 @@ public class DigitalVideoDisc {
     public void print() {
         System.out.println(id + " - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$");
     }
-
 
 
 }
