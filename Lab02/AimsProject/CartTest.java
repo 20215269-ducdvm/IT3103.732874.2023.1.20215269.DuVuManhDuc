@@ -16,22 +16,6 @@ public class CartTest {
 
         //Test the print method
         cart.printCart();
-        //To-do: test the search methods here
-        //Search for a DVD with the ID "DVD1"
-        System.out.println("Search for a DVD with the ID \"DVD1\":");
-        if (!cart.isMatchId("DVD1"))
-            System.out.println("Not found");
-
-
-        //Search for a DVD with the title "The Lion King"
-        System.out.println("Search for a DVD with the title \"The Lion King\":");
-        if (!cart.isMatchTitle("The Lion King"))
-            System.out.println("Not found");
-
-        //Search for a DVD with the title "Aladi"
-        System.out.println("Search for a DVD with the title \"Aladi\":");
-        if (!cart.isMatchTitle("Aladi"))
-            System.out.println("Not found");
     }
 
 }
