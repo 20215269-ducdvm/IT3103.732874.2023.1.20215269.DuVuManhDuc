@@ -27,6 +27,12 @@ public class DigitalVideoDisc {
         return cost;
     }
 
+    public String getId() {
+        return id;
+    }
+    public int getNbDigitalVideoDiscs() {
+        return nbDigitalVideoDiscs;
+    }
     /**
      * Constructor methods for DigitalVideoDisc
      */
