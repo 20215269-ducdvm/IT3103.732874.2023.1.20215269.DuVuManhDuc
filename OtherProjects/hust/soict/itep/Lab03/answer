@@ -4,6 +4,9 @@ A Trong trường hợp này, em thấy phương thức với tham số biến �
 -	Khi muốn thêm DVD vào thì chỉ cần viết DVD đó trực tiếp vào đầu vào của phương thức mà không phải tạo một mảng mới.
 -	Ta có thể thêm một số lượng DVD bất kì vào đầu vào của phương thức.
 
+Q: Java là ngôn ngữ Pass-By-Value hay Pass-By-Reference?
+A: Java là ngôn ngữ Pass-By-Value.
+
 Q	Sau khi gọi phương thức swap (jungleDVD, cinderellaDVD),giá trị title của hai đối tượng DVD vẫn giữ nguyên?
 A Điều này là bởi vì khi gọi phương thức swap, JAVA sẽ copy giá trị của các tham số đầu vào jungleDVD, cinderellaDVD, sau đó truyền vào phương thức swap để thực hiện. 
 Do đó hàm swap chỉ thực hiện hoán đổi bản sao của 2 tham số đầu vào, chứ không thực hiện hoán đổi chính 2 tham số đó.
