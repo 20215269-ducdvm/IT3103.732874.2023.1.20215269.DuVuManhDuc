@@ -1,3 +1,5 @@
+package Lab02.AimsProject;
+
 public class TestPassingParameter {
     // TODO auto-generated method stub
     public static void main(String[] args) {
