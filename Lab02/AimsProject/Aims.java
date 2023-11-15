@@ -1,5 +1,3 @@
-package Lab02.AimsProject;
-
 public class Aims {
     /**
      * Main method
@@ -23,11 +21,14 @@ public class Aims {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
         anOrder.addDigitalVideoDisc(dvd3);
 
+        //Print total costs of all items in the cart
+        System.out.println("Total Cost is: ");
+        System.out.println(anOrder.totalCost());
 
+        //Remove a DVD from the cart
+        anOrder.removeDigitalVideoDisc(dvd3);
         //Print all DVDs in the cart
-        System.out.println("There are " + anOrder.getQtyOrdered() + " DVDs in the cart:");
         anOrder.printCart();
-
     }
 
 }
