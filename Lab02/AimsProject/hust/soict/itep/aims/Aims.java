@@ -1,10 +1,13 @@
-package Lab02.AimsProject;
+package Lab02.AimsProject.hust.soict.itep.aims;
+
+import Lab02.AimsProject.hust.soict.itep.aims.disc.DigitalVideoDisc;
+import Lab02.AimsProject.hust.soict.itep.aims.cart.Cart;
 
 public class Aims {
     /**
      * Main method
      * @param args
-     * Create a new Cart, create new DVDs and populate the cart with those DVDs.
+     * Create a new Lab02.AimsProject.hust.soict.itep.aims.cart.Cart, create new DVDs and populate the cart with those DVDs.
      * Print the total cost of all items in the cart
      * Remove a DVD from the cart
      */

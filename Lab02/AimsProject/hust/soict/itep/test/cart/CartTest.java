@@ -1,5 +1,7 @@
-package Lab02.AimsProject;
+package Lab02.AimsProject.hust.soict.itep.test.cart;
 
+import Lab02.AimsProject.hust.soict.itep.aims.disc.DigitalVideoDisc;
+import Lab02.AimsProject.hust.soict.itep.aims.cart.Cart;
 public class CartTest {
     public static void main (String[] args) {
 

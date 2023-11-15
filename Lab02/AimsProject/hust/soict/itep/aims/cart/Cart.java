@@ -1,5 +1,7 @@
+package Lab02.AimsProject.hust.soict.itep.aims.cart;
+import Lab02.AimsProject.hust.soict.itep.aims.disc.DigitalVideoDisc;
 public class Cart {
-    public static final int MAX_NUMBER_ORDERED = 2;
+    public static final int MAX_NUMBER_ORDERED = 20;
 
     /**
      * The list of ordered DVDs in the cart
@@ -57,5 +59,25 @@ public class Cart {
         for(int i = 0; i < qtyOrdered; i++) {
            itemsOrdered[i].print();
         }
+    }
+
+    public boolean isMatchId(String dvd1) {
+        for(int i = 0; i < qtyOrdered; i++) {
+            if(itemsOrdered[i].getId().equals(dvd1)) {
+                itemsOrdered[i].print();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isMatchTitle(String theLionKing) {
+        for(int i = 0; i < qtyOrdered; i++) {
+            if(itemsOrdered[i].getTitle().equals(theLionKing)) {
+                itemsOrdered[i].print();
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -1,3 +1,5 @@
+package Lab02.AimsProject.hust.soict.itep.aims.store;
+import Lab02.AimsProject.hust.soict.itep.aims.disc.DigitalVideoDisc;
 public class Store {
     DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[100];
     int qtyInStore = 0;

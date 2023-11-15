@@ -1,4 +1,6 @@
-package Lab02.AimsProject;
+package Lab02.AimsProject.hust.soict.itep.test.disc;
+
+import Lab02.AimsProject.hust.soict.itep.aims.disc.DigitalVideoDisc;
 
 public class TestPassingParameter {
     // TODO auto-generated method stub
