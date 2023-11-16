@@ -50,6 +50,12 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
     /**
+     * Setters for DigitalVideoDisc
+     */
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    /**
      * Method to print out the information of a DigitalVideoDisc
      */
     public void print() {
