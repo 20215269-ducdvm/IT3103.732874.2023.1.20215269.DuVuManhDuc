@@ -66,6 +66,7 @@ public class DigitalVideoDisc {
         nbDigitalVideoDiscs++;
         id = "DVD" + nbDigitalVideoDiscs;
     }
+
     /**
      * Setters for DigitalVideoDisc
      */

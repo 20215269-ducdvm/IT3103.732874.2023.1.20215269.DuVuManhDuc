@@ -1,3 +1,5 @@
+package Lab02.AimsProject;
+
 public class Aims {
     /**
      * Main method
