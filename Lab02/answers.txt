@@ -1,3 +1,0 @@
-Q: Nếu tạo một phương thức khởi tạo để tạo 1 DVD bằng title và sau đó tạo tiếp một phương thức khởi tạo để tạo 1 DVD bằng category, liệu JAVA có cho phép bạn làm thế không?
-
-A: Trong Java, chúng ta không thể tạo 2 phương thức khởi dựng như vậy. Bởi vì hai phương thức này có cùng chữ ký, đó là DVD(String), cho nên Java sẽ không phân biệt được phương thức nào khởi tạo 1 DVD bằng title hay category, do đó xảy ra lỗi.	
