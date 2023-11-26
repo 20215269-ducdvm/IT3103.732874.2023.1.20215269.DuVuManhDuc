@@ -45,5 +45,9 @@ public abstract class Media {
     public void setCost(float cost) {
         this.cost = cost;
     }
-
+    @Override
+    public boolean equals(Object o) {
+        Media media = (Media) o;
+        return media.getTitle().equals(this.getTitle());
+    }
 }
