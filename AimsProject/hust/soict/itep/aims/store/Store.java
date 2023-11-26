@@ -1,5 +1,5 @@
 package AimsProject.hust.soict.itep.aims.store;
-import AimsProject.hust.soict.itep.aims.disc.DigitalVideoDisc;
+import AimsProject.hust.soict.itep.aims.media.DigitalVideoDisc;
 public class Store {
     DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[100];
     int qtyInStore = 0;
