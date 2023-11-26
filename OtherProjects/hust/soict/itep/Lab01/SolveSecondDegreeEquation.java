@@ -1,4 +1,4 @@
-package Lab01;
+package OtherProjects.hust.soict.itep.Lab01;
 import javax.swing.JOptionPane;
 public class SolveSecondDegreeEquation {
     public static void main(String args[]) {

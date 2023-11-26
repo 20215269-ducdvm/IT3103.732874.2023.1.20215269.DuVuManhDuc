@@ -1,4 +1,4 @@
-package Lab02.OtherProjects.hust.soict.itep.garbage;
+package OtherProjects.hust.soict.itep.garbage;
 
 import java.util.Random;
 

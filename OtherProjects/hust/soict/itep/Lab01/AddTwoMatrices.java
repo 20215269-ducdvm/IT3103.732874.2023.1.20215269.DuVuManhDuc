@@ -1,4 +1,4 @@
-package Lab01;
+package OtherProjects.hust.soict.itep.Lab01;
 
 public class AddTwoMatrices {
     private static final int SIZE = 6;

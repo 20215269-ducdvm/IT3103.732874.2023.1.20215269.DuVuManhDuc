@@ -1,4 +1,4 @@
-package Lab01;
+package OtherProjects.hust.soict.itep.Lab01;
 import java.util.Scanner;
 import java.lang.String;
 public class DisplayNumberOfDays {

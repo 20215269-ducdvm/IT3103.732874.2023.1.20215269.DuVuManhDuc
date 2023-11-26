@@ -1,4 +1,4 @@
-package Lab02.OtherProjects.hust.soict.itep.garbage;
+package OtherProjects.hust.soict.itep.garbage;
 
 import java.util.Random;
 
@@ -8,6 +8,7 @@ public class NoGarbage {
         long start = System.currentTimeMillis();
         String s = "Hello World";
         StringBuilder sb = new StringBuilder(s);
+        // Using StringBuilder. No garbage is created
         for (int i = 0; i < 1000000; i++) {
             sb.append("Hello World");
         }
