@@ -61,9 +61,9 @@ public class Cart {
         }
     }
 
-    public boolean isMatchId(String dvd1) {
+    public boolean isMatchId(int id) {
         for(int i = 0; i < qtyOrdered; i++) {
-            if(itemsOrdered[i].getId().equals(dvd1)) {
+            if(itemsOrdered[i].getId() == id) {
                 itemsOrdered[i].print();
                 return true;
             }

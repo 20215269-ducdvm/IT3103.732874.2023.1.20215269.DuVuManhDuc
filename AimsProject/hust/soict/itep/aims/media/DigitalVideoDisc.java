@@ -13,6 +13,9 @@ public class DigitalVideoDisc extends Disc{
     public String getDirector() {
         return director;
     }
+    public int getId() {
+        return id;
+    }
     public int getLength() {
         return length;
     }
