@@ -9,9 +9,7 @@ public class CompactDisc extends Disc implements Playable{
     public String getArtist() {
         return artist;
     }
-    public CompactDisc() {
-        super();
-    }
+
     public CompactDisc(String artist) {
         super();
         this.artist = artist;
