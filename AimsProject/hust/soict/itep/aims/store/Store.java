@@ -1,37 +1,36 @@
 package AimsProject.hust.soict.itep.aims.store;
-import AimsProject.hust.soict.itep.aims.media.DigitalVideoDisc;
+
+import AimsProject.hust.soict.itep.aims.media.Media;
+
+import java.util.ArrayList;
+
 public class Store {
-    DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[100];
+    private ArrayList<Media> itemsInStore = new ArrayList<>();
     int qtyInStore = 0;
     /**
-     * Add a disc to the store if the store is not full
-     * @param disc the disc to be added
+     * Add a media to the store if the store is not full
+     * @param media the media to be added
      */
-    public void addDVD(DigitalVideoDisc disc) {
+    public void addMedia(Media media) {
         if(qtyInStore < 100) {
-            itemsInStore[qtyInStore] = disc;
+            itemsInStore.add(media);
             qtyInStore++;
-            System.out.println("The disc has been added");
-        }
-        else {
+            System.out.println("The media has been added");
+        } else {
             System.out.println("The store is almost full");
         }
     }
     /**
-     * Remove a disk from the store if the disk is found
-     * @param disc the disk to be removed
+     * Remove a media from the store
+     * @param media the media to be removed
      */
-    public void removeDVD(DigitalVideoDisc disc) {
-        for(int i = 0; i < qtyInStore; i++) {
-            if(itemsInStore[i].getTitle().equals(disc.getTitle())) {
-                for(int j = i; j < qtyInStore - 1; j++) {
-                    itemsInStore[j] = itemsInStore[j + 1];
-                }
-                qtyInStore--;
-                System.out.println("The disc has been removed");
-                return;
-            }
+    public void removeMedia(Media media) {
+        if (itemsInStore.contains(media)) {
+            itemsInStore.remove(media);
+            qtyInStore--;
+            System.out.println("The media has been removed");
+        } else {
+            System.out.println("The media is not in the store");
         }
-        System.out.println("The disc is not in the store");
     }
 }

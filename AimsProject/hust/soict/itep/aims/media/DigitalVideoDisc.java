@@ -1,6 +1,6 @@
 package AimsProject.hust.soict.itep.aims.media;
 
-public class DigitalVideoDisc extends Disc{
+public class DigitalVideoDisc extends Disc implements Playable{
 
 
     public static int nbDigitalVideoDiscs = 0;
@@ -61,6 +61,12 @@ public class DigitalVideoDisc extends Disc{
     public void print() {
         System.out.println(id + " - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$");
     }
+    public void play() {
 
+        System.out.println("Playing DVD: " + this.getTitle());
+
+        System.out.println("DVD length: " + this.getLength());
+
+    }
 
 }
