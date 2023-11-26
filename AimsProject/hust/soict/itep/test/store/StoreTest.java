@@ -8,10 +8,6 @@ public class StoreTest {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);;
 
         Store store = new Store();
-        store.addDVD(dvd1); // The disc has been added
-        store.addDVD(dvd2); // The disc has been added
-        store.addDVD(dvd3); // The disc has been added
-        store.removeDVD(dvd2); // The disc has been removed
-        store.removeDVD(dvd2); // The disc is not in the store
+
     }
 }

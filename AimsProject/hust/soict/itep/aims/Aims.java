@@ -1,39 +1,28 @@
 package AimsProject.hust.soict.itep.aims;
 
+import AimsProject.hust.soict.itep.aims.media.Book;
+import AimsProject.hust.soict.itep.aims.media.CompactDisc;
 import AimsProject.hust.soict.itep.aims.media.DigitalVideoDisc;
-import AimsProject.hust.soict.itep.aims.cart.Cart;
+import AimsProject.hust.soict.itep.aims.media.Media;
 
+
+import java.util.List;
+import java.util.ArrayList;
 public class Aims {
-    /**
-     * Main method
-     * @param args
-     * Create a new AimsProject.hust.soict.itep.aims.cart.Cart, create new DVDs and populate the cart with those DVDs.
-     * Print the total cost of all items in the cart
-     * Remove a DVD from the cart
-     */
     public static void main(String args[]) {
+        List<Media> mediae = new ArrayList<>();
 
-        //Create a new cart
-        Cart anOrder = new Cart();
+        CompactDisc cd1 = new CompactDisc("CD1");
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("DVD1");
+        Book book1 = new Book("BOOK1");
 
-        //Create new DVD objects and add them to the cart
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
-        anOrder.addDigitalVideoDisc(dvd1);
+        mediae.add(cd1);
+        mediae.add(dvd1);
+        mediae.add(book1);
 
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
-        anOrder.addDigitalVideoDisc(dvd2);
-
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
-        anOrder.addDigitalVideoDisc(dvd3);
-
-        //Print total costs of all items in the cart
-        System.out.println("Total Cost is: ");
-        System.out.println(anOrder.totalCost());
-
-        //Remove a DVD from the cart
-        anOrder.removeDigitalVideoDisc(dvd3);
-        //Print all DVDs in the cart
-        anOrder.printCart();
+        for (Media media : mediae) {
+            System.out.println(media.toString());
+        }
     }
 
 }
