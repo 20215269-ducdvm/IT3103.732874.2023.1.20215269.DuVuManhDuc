@@ -11,6 +11,20 @@ public class Book extends Media{
     public Book(String title) {
         super(title);
     }
+    public Book(String title, String category, float cost) {
+        super(title, category, cost);
+    }
+    public Book(String title, String category, float cost, List<String> authorList) {
+        this(title, category, cost);
+        authors = authorList;
+    }
+    public StringBuilder getAuthors() {
+        StringBuilder sb = new StringBuilder();
+        for (String author: authors) {
+            sb.append(author).append(" ");
+        }
+        return sb;
+    }
     public void addAuthor(String authorName) {
         if (authors.contains(authorName)) {
             System.out.println("Author already exists");
@@ -27,10 +41,11 @@ public class Book extends Media{
             System.out.println("Author not found");
         }
     }
-    public void printAuthors() {
-        System.out.println("Authors:");
-        for (String author : authors) {
-            System.out.println(author);
-        }
+    @Override
+    public void printInfo() {
+        System.out.println("---------Book---------");
+        super.printInfo();
+        System.out.println("Author(s): " + this.getAuthors());
+        System.out.println("----------------------");
     }
 }

@@ -1,6 +1,6 @@
 package AimsProject.hust.soict.itep.aims.store;
 
-import AimsProject.hust.soict.itep.aims.media.Media;
+import AimsProject.hust.soict.itep.aims.media.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,9 @@ public class Store {
      */
     public void addMedia(Media media) {
         if(qtyInStore < 100) {
+            if (media instanceof CompactDisc) {
+
+            }
             itemsInStore.add(media);
             qtyInStore++;
             System.out.println("The media has been added");
@@ -39,6 +42,7 @@ public class Store {
      */
     public Media searchMedia(String title) {
         for (Media media : itemsInStore) {
+            if (media.getTitle() != null)
             if (media.getTitle().equals(title)) {
                 System.out.println("The media is in the store");
                 return media;
@@ -51,10 +55,14 @@ public class Store {
      * Show the information of a media
      */
     public void showMediaInfo(Media media) {
-        System.out.println("Title: " + media.getTitle());
-        System.out.println("Category: " + media.getCategory());
-        System.out.println("Cost: " + media.getCost());
-        System.out.println("ID: " + media.getId());
+       if (media instanceof Book) {
+           ((Book) media).printInfo();
+       }
+       else if (media instanceof CompactDisc) {
+           ((CompactDisc) media).printInfo();
+       } else if(media instanceof DigitalVideoDisc) {
+           ((DigitalVideoDisc) media).printInfo();
+       }
     }
     /**
      * Show the information of all the medias in the store
@@ -64,44 +72,5 @@ public class Store {
             showMediaInfo(media);
         }
     }
-    /**
-     * Filter the medias in the store by id
-     */
-    public List<Media> filterById(int id) {
-        List<Media> filteredList = new ArrayList<>();
-        for (Media media : itemsInStore) {
-            if (media.getId() == id) {
-                filteredList.add(media);
-            }
-        }
-        return filteredList;
-    }
-    /**
-     * Filter the medias in the store by title
-     */
-    public List<Media> filterByTitle(String title) {
-        List<Media> filteredList = new ArrayList<>();
-        for (Media media : itemsInStore) {
-            if (media.getTitle().equals(title)) {
-                filteredList.add(media);
-            }
-        }
-        return filteredList;
-    }
-    /**
-     * Sort the medias in the store by title
-     */
-    public List<Media> sortByTitle() {
-        List<Media> sortedList = new ArrayList<>(itemsInStore);
-        sortedList.sort(Media.COMPARE_BY_TITLE_COST);
-        return sortedList;
-    }
-    /**
-     * Sort the medias in the store by cost
-     */
-    public List<Media> sortByCost() {
-        List<Media> sortedList = new ArrayList<>(itemsInStore);
-        sortedList.sort(Media.COMPARE_BY_COST_TITLE);
-        return sortedList;
-    }
+
 }

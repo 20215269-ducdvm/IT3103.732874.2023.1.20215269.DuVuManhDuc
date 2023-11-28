@@ -47,10 +47,22 @@ public abstract class Media {
     public void setCost(float cost) {
         this.cost = cost;
     }
+    public void printInfo() {
+        System.out.println("ID: " + id);
+        System.out.println("Title: " + title);
+        System.out.println("Category: " + category);
+        System.out.println("Cost:" + cost);
+    }
     @Override
     public boolean equals(Object o) {
         Media media = (Media) o;
-        return media.getTitle().equals(this.getTitle());
+        try {
+            String title = media.getTitle();
+            return title.equals(this.getTitle());
+        }
+        catch (NullPointerException e) {
+            return false;
+        }
     }
     public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
