@@ -1,0 +1,13 @@
+Q: Những lớp nào nên thực thi giao diện Comparable?
+
+A: Hai lớp đảm nhiệm chức năng sắp xếp bằng tiêu đề, sau đó bằng giá; và sắp xếp bằng giá, sau đó bằng tiêu đề
+
+Q: Trong những lớp đó, làm sao để thực hiện phương thức compareTo() để có thể phản ánh thứ tự mà chúng ta muốn?
+A: Ta viết phương thức compareTo() để so sánh các thuộc tính cần thiết. 
+
+Q: Chúng ta có thể có hai quy tắc sắp xếp của mặt hàng(theo tiêu đề sau đó giá và theo giá sau đó tiêu đề) nếu sử dụng phương thức Comparable hay không?
+
+A: Không, bởi vì đối với giao diện Comparable, ta chỉ có thể xác định một quy tắc sắp xếp duy nhất cho mỗi cách triển khai compareTo(). Nếu muốn có hai quy tắc sắp xếp khác nhau, ta cần phải tạo hai lớp hoặc sử dụng Comparator thay vì Comparable.
+
+Q: Giả sử các DVD có một quy tắc sắp xếp khác biệt so với các loại phương tiện khác, đó là theo tiêu đề, sau đó là độ dài giảm dần, sau đó là giá. Làm thế nào để bạn sửa mã của mình để cho phép điều này?
+A: Ta có thể ghi đè phương thức compareTo() trong lớp DVD để so sánh các thuộc tính theo thứ tự mong muốn.
