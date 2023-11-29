@@ -43,11 +43,7 @@ public class CompactDisc extends Disc implements Playable{
         }
         return totalLength;
     }
-    public void printAllTracks() {
-        for (Track track: tracks) {
-            track.printTrackInfo();
-        }
-    }
+
     public void play() {
         System.out.println("There are " + tracks.size() + " tracks in this CD");
         for(Track track : tracks) {
@@ -55,15 +51,16 @@ public class CompactDisc extends Disc implements Playable{
         }
     }
     @Override
-    public void printInfo() {
-        System.out.println("----------CD----------");
-        super.printInfo();
-        System.out.println("Artist: " + this.getArtist());
-        System.out.println("Director: " + this.getDirector());
-        System.out.println("Length: " + this.getLength());
-        System.out.println("Cost: " + this.getCost());
-        System.out.println("All CD's tracks: ");
-        this.printAllTracks();
-        System.out.println("----------------------");
+    public String toString() {
+        return "CompactDisc{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", cost=" + cost +
+                ", length=" + length +
+                ", director='" + director + '\'' +
+                ", artist='" + artist + '\'' +
+                ", tracks=" + tracks +
+                '}';
     }
 }

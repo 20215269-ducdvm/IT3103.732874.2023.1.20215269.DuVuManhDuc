@@ -42,10 +42,13 @@ public class Book extends Media{
         }
     }
     @Override
-    public void printInfo() {
-        System.out.println("---------Book---------");
-        super.printInfo();
-        System.out.println("Author(s): " + this.getAuthors());
-        System.out.println("----------------------");
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", cost=" + cost +
+                ", authors=" + getAuthors() +
+                '}';
     }
 }

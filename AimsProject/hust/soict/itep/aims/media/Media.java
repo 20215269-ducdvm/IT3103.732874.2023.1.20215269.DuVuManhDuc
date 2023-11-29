@@ -47,12 +47,6 @@ public abstract class Media {
     public void setCost(float cost) {
         this.cost = cost;
     }
-    public void printInfo() {
-        System.out.println("ID: " + id);
-        System.out.println("Title: " + title);
-        System.out.println("Category: " + category);
-        System.out.println("Cost:" + cost);
-    }
     @Override
     public boolean equals(Object o) {
         Media media = (Media) o;
@@ -63,6 +57,15 @@ public abstract class Media {
         catch (NullPointerException e) {
             return false;
         }
+    }
+    @Override
+    public String toString() {
+        return "Media{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", cost=" + cost +
+                '}';
     }
     public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();

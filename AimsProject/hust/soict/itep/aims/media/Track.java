@@ -24,11 +24,7 @@ public class Track implements Playable{
         System.out.println("Track length: " + this.getLength());
 
     }
-    public void printTrackInfo() {
-        System.out.println("Track: ");
-        System.out.println("Title: " + title);
-        System.out.println("Length: " + length);
-    }
+
     @Override
     public boolean equals(Object o) {
         Track track = (Track) o;

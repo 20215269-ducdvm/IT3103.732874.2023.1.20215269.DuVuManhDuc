@@ -67,7 +67,7 @@ public class Cart {
     public void printCart() {
         System.out.println("***********************CART***********************");
         for (Media media : itemsOrdered) {
-            media.printInfo();
+            System.out.println(media.toString());
         }
         System.out.println("Total cost: " + totalCost());
         System.out.println("***************************************************");

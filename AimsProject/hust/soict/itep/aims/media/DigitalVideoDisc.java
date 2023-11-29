@@ -48,16 +48,16 @@ public class DigitalVideoDisc extends Disc implements Playable{
     /**
      * Method to print out the information of a DigitalVideoDisc
      */
-//    public void print() {
-//        System.out.println(id + " - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$");
-//    }
     @Override
-    public void printInfo() {
-        System.out.println("----------DVD----------");
-        super.printInfo();
-        System.out.println("Director: " + director);
-        System.out.println("Length: " + length);
-        System.out.println("----------------------");
+    public String toString() {
+        return "DigitalVideoDisc{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", cost=" + cost +
+                ", length=" + length +
+                ", director='" + director + '\'' +
+                '}';
     }
     public void play() {
 

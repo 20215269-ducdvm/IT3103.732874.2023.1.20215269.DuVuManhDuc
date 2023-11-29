@@ -54,14 +54,16 @@ public class Store {
     /**
      * Show the information of a media
      */
-    public void showMediaInfo(Media media) {
+    public String showMediaInfo(Media media) {
        if (media instanceof Book) {
-           ((Book) media).printInfo();
+           return ((Book) media).toString();
        }
        else if (media instanceof CompactDisc) {
-           ((CompactDisc) media).printInfo();
+              return ((CompactDisc) media).toString();
        } else if(media instanceof DigitalVideoDisc) {
-           ((DigitalVideoDisc) media).printInfo();
+              return ((DigitalVideoDisc) media).toString();
+       } else {
+              return "The media is not in the store";
        }
     }
     /**
@@ -69,7 +71,7 @@ public class Store {
      */
     public void showAllMediaInfo() {
         for (Media media : itemsInStore) {
-            showMediaInfo(media);
+            System.out.println(showMediaInfo(media));
         }
     }
 
